@@ -1722,7 +1722,7 @@ header .sidebar__toggle {
 }
 @media screen and (min-width: 1400px) {
   .qu-ceo-message .section-image-wrapper img {
-    max-height: 450px;
+    max-height: 650px;
   }
 }
 .qu-ceo-message .content-wrapper {
