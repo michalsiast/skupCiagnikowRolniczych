@@ -40,14 +40,14 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-md-6">
+                                <div class="col-md-12">
                                     {!! $form->renderFieldGroup('company_city') !!}
                                 </div>
-                                <div class="col-md-6">
-                                    {!! $form->renderFieldGroup('company_country') !!}
-                                </div>
+{{--                                <div class="col-md-6">--}}
+{{--                                    {!! $form->renderFieldGroup('company_country') !!}--}}
+{{--                                </div>--}}
                             </div>
-                            {!! $form->renderFieldGroup('company_nip') !!}
+{{--                            {!! $form->renderFieldGroup('company_nip') !!}--}}
 {{--                            {!! $form->renderFieldGroup('company_krs') !!}--}}
                         </div>
                     </div>
@@ -59,40 +59,40 @@
                         </div>
                         <div class="card-body">
                             {!! $form->renderFieldGroup('phone') !!}
-{{--                            {!! $form->renderFieldGroup('phone2') !!}--}}
+                            {!! $form->renderFieldGroup('phone2') !!}
                             {!! $form->renderFieldGroup('email') !!}
 {{--                            {!! $form->renderFieldGroup('email2') !!}--}}
-                            {!! $form->renderFieldGroup('contact_form_email') !!}
-{{--                            {!! $form->renderFieldGroup('google_map') !!}--}}
-                            {!! $form->renderFieldGroup('google_map_iframe') !!}
+{{--                            {!! $form->renderFieldGroup('contact_form_email') !!}--}}
+                            {!! $form->renderFieldGroup('google_map') !!}
+{{--                            {!! $form->renderFieldGroup('google_map_iframe') !!}--}}
                         </div>
                     </div>
                 </div>
-                <div class="col-12">
-                    <div class="card">
-                        <div class="card-header">
-                            Social Media
-                        </div>
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    {!! $form->renderFieldGroup('facebook') !!}
-                                </div>
-                                <div class="col-lg-6">
-                                    {!! $form->renderFieldGroup('instagram') !!}
-                                </div>
-                            </div>
+{{--                <div class="col-12">--}}
+{{--                    <div class="card">--}}
+{{--                        <div class="card-header">--}}
+{{--                            Social Media--}}
+{{--                        </div>--}}
+{{--                        <div class="card-body">--}}
+{{--                            <div class="row">--}}
+{{--                                <div class="col-lg-6">--}}
+{{--                                    {!! $form->renderFieldGroup('facebook') !!}--}}
+{{--                                </div>--}}
+{{--                                <div class="col-lg-6">--}}
+{{--                                    {!! $form->renderFieldGroup('instagram') !!}--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
 
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12">
-                    <div class="card">
-                        <div class="card-body">
-                    {!! $form->renderFieldGroup('contact_form_rule') !!}
-                        </div>
-                    </div>
-                </div>
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="col-12">--}}
+{{--                    <div class="card">--}}
+{{--                        <div class="card-body">--}}
+{{--                    {!! $form->renderFieldGroup('contact_form_rule') !!}--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
             </div>
 
         </form>

@@ -8,28 +8,28 @@
                 {{__('admin.article.plural')}}
                 <a href="{{route('admin.article.create')}}" class="btn btn-primary">{{__('admin.crud.create')}}</a>
             </div>
-            <div class="card-header">
-                @if(isset($categories))
-                    <form action="{{route('admin.article.index')}}" method="get" id="searchCategory" class="searchCategory">
-                        <label for="Filtrowanie">Filter kategorii:</label>
+{{--            <div class="card-header">--}}
+{{--                @if(isset($categories))--}}
+{{--                    <form action="{{route('admin.article.index')}}" method="get" id="searchCategory" class="searchCategory">--}}
+{{--                        <label for="Filtrowanie">Filter kategorii:</label>--}}
 
-                        <select name="category" id="category">
-                            <option value="0">Wszystkie</option>
-                            @foreach($categories as $category)
-                                <option value="{{$category->id}}" @if(isset($_GET['category'])){{$_GET['category'] == $category->id ? 'selected="selected"' : ''}}@endif>{{$category->title}}</option>
-                            @endforeach
-                        </select>
-                    </form>
-                    @endif
-            </div>
+{{--                        <select name="category" id="category">--}}
+{{--                            <option value="0">Wszystkie</option>--}}
+{{--                            @foreach($categories as $category)--}}
+{{--                                <option value="{{$category->id}}" @if(isset($_GET['category'])){{$_GET['category'] == $category->id ? 'selected="selected"' : ''}}@endif>{{$category->title}}</option>--}}
+{{--                            @endforeach--}}
+{{--                        </select>--}}
+{{--                    </form>--}}
+{{--                    @endif--}}
+{{--            </div>--}}
             <div class="card-body">
                 <table class="table table-striped table-responsive-sm sortable" data-table="article">
                     <thead>
                         <tr>
                             <td>#</td>
-                            <td></td>
+{{--                            <td></td>--}}
                             <td>{{__('admin.article.title')}}</td>
-                            <td>Kategoria</td>
+{{--                            <td>Kategoria</td>--}}
                             <td>{{__('admin.active')}}</td>
                             <td></td>
                         </tr>
@@ -40,20 +40,20 @@
                         @foreach($items as $key=>$article)
                             <tr data-id="{{$article->id}}">
                                 <td data-position>{{$i++}}</td>
-                                <td style="width: 50px">
-                                    <img src="{{renderSmallCover($article)}}" alt="">
-                                </td>
+{{--                                <td style="width: 50px">--}}
+{{--                                    <img src="{{renderSmallCover($article)}}" alt="">--}}
+{{--                                </td>--}}
                                 <td>
                                     {{$article->title}}
-                                    @if(isset($article->seo))
-                                        <small style="display: block">
-                                            <a @if($article->active) target="_blank" @else style="color: grey; opacity: .75" @endif href="@if($article->active){{url()->to('')}}{{$article->seo->url}}@else#@endif">
-                                                {{str_replace(['https://', 'http://'], '', url()->to(''))}}{{$article->seo->url}}
-                                            </a>
-                                        </small>
-                                    @endif
+{{--                                    @if(isset($article->seo))--}}
+{{--                                        <small style="display: block">--}}
+{{--                                            <a @if($article->active) target="_blank" @else style="color: grey; opacity: .75" @endif href="@if($article->active){{url()->to('')}}{{$article->seo->url}}@else#@endif">--}}
+{{--                                                {{str_replace(['https://', 'http://'], '', url()->to(''))}}{{$article->seo->url}}--}}
+{{--                                            </a>--}}
+{{--                                        </small>--}}
+{{--                                    @endif--}}
                                 </td>
-                                <td>{!! $article->category->title ?? '' !!}</td>
+{{--                                <td>{!! $article->category->title ?? '' !!}</td>--}}
                                 <td>
                                     <input type="checkbox" class="status-switch" data-source_table="article" data-source_id="{{$article->id}}" {{$article->active ? 'checked' : ''}}>
                                 </td>

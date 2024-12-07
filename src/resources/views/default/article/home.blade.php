@@ -1,6 +1,10 @@
-<h2>article home</h2>
-@foreach($items as $item)
-    <li>
-        <a href="{{route('article.show.'.$item->id)}}">{{$item->title}}</a>
-    </li>
-@endforeach
+<ul class="ceo_section_list" data-aos="fade-up" data-aos-delay="150">
+    @foreach($items as $item)
+        <li>
+            <h5>
+                {{$item->title}}
+            </h5>
+            {!! $item->text !!}
+        </li>
+    @endforeach
+</ul>
