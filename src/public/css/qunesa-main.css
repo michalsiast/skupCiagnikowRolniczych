@@ -992,9 +992,10 @@ header .primary-nav-menu {
 header .primary-nav-menu a {
   padding: 10px 10px;
   color: white;
-  text-transform: uppercase;
   position: relative;
   transition: all 0.15s ease;
+    font-family: Poppins;
+    font-weight: 500;
 }
 header .primary-nav-menu a:hover {
   color: var(--qu-color-theme);
